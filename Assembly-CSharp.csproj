@@ -36,12 +36,13 @@
     <ImplicitlyExpandDesignTimeFacades>false</ImplicitlyExpandDesignTimeFacades>
   </PropertyGroup>
   <ItemGroup>
+     <Compile Include="Assets\Scripts\Recordcreater.cs" />
      <Compile Include="Assets\Scripts\SkyboxRotate.cs" />
      <Compile Include="Assets\Scripts\DatarecordMove.cs" />
      <Compile Include="Assets\Scripts\SimpleCameraController.cs" />
      <Compile Include="Assets\Scripts\Rotate.cs" />
-     <Compile Include="Assets\Scripts\Recordcreater.cs" />
      <Compile Include="Assets\Scripts\RecordDeleter.cs" />
+     <None Include="Assets\Materials\Arclighting\shader_animatingTile.shader" />
      <None Include="Assets\SkySerie Freebie\Hdri setup.txt" />
     <Reference Include="UnityEngine">
         <HintPath>D:/Program Files (x86)/2020.3.14f1/Editor/Data/Managed/UnityEngine/UnityEngine.dll</HintPath>
@@ -738,6 +739,12 @@
     </Reference>
     <Reference Include="Unity.XR.Oculus">
         <HintPath>C:/Users/김영찬/Kill them All/Library/ScriptAssemblies/Unity.XR.Oculus.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.VisualEffectGraph.Editor">
+        <HintPath>C:/Users/김영찬/Kill them All/Library/ScriptAssemblies/Unity.VisualEffectGraph.Editor.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.VisualEffectGraph.Runtime">
+        <HintPath>C:/Users/김영찬/Kill them All/Library/ScriptAssemblies/Unity.VisualEffectGraph.Runtime.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
