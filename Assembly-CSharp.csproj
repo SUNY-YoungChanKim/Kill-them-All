@@ -42,6 +42,8 @@
      <Compile Include="Assets\Scripts\SimpleCameraController.cs" />
      <Compile Include="Assets\Scripts\Rotate.cs" />
      <Compile Include="Assets\Scripts\RecordDeleter.cs" />
+     <Compile Include="Assets\Presets\Hands\Hand.cs" />
+     <Compile Include="Assets\Presets\Hands\HandController.cs" />
      <None Include="Assets\Materials\Arclighting\shader_animatingTile.shader" />
      <None Include="Assets\SkySerie Freebie\Hdri setup.txt" />
     <Reference Include="UnityEngine">
@@ -617,6 +619,9 @@
     <Reference Include="System.Xml.XPath.XDocument">
         <HintPath>D:/Program Files (x86)/2020.3.14f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Xml.XPath.XDocument.dll</HintPath>
     </Reference>
+    <Reference Include="Unity.VisualEffectGraph.Editor">
+        <HintPath>C:/Users/김영찬/Kill them All/Library/ScriptAssemblies/Unity.VisualEffectGraph.Editor.dll</HintPath>
+    </Reference>
     <Reference Include="Unity.VSCode.Editor">
         <HintPath>C:/Users/김영찬/Kill them All/Library/ScriptAssemblies/Unity.VSCode.Editor.dll</HintPath>
     </Reference>
@@ -634,6 +639,9 @@
     </Reference>
     <Reference Include="Unity.XR.OpenXR.Features.OculusQuestSupport.Editor">
         <HintPath>C:/Users/김영찬/Kill them All/Library/ScriptAssemblies/Unity.XR.OpenXR.Features.OculusQuestSupport.Editor.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.VisualEffectGraph.Runtime">
+        <HintPath>C:/Users/김영찬/Kill them All/Library/ScriptAssemblies/Unity.VisualEffectGraph.Runtime.dll</HintPath>
     </Reference>
     <Reference Include="Unity.XR.Management.Editor">
         <HintPath>C:/Users/김영찬/Kill them All/Library/ScriptAssemblies/Unity.XR.Management.Editor.dll</HintPath>
@@ -710,11 +718,11 @@
     <Reference Include="UnityEditor.XR.LegacyInputHelpers">
         <HintPath>C:/Users/김영찬/Kill them All/Library/ScriptAssemblies/UnityEditor.XR.LegacyInputHelpers.dll</HintPath>
     </Reference>
-    <Reference Include="Unity.Mathematics.Editor">
-        <HintPath>C:/Users/김영찬/Kill them All/Library/ScriptAssemblies/Unity.Mathematics.Editor.dll</HintPath>
-    </Reference>
     <Reference Include="Unity.XR.Management">
         <HintPath>C:/Users/김영찬/Kill them All/Library/ScriptAssemblies/Unity.XR.Management.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.Mathematics.Editor">
+        <HintPath>C:/Users/김영찬/Kill them All/Library/ScriptAssemblies/Unity.Mathematics.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.XR.Oculus.Editor">
         <HintPath>C:/Users/김영찬/Kill them All/Library/ScriptAssemblies/Unity.XR.Oculus.Editor.dll</HintPath>
@@ -739,12 +747,6 @@
     </Reference>
     <Reference Include="Unity.XR.Oculus">
         <HintPath>C:/Users/김영찬/Kill them All/Library/ScriptAssemblies/Unity.XR.Oculus.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.VisualEffectGraph.Editor">
-        <HintPath>C:/Users/김영찬/Kill them All/Library/ScriptAssemblies/Unity.VisualEffectGraph.Editor.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.VisualEffectGraph.Runtime">
-        <HintPath>C:/Users/김영찬/Kill them All/Library/ScriptAssemblies/Unity.VisualEffectGraph.Runtime.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
