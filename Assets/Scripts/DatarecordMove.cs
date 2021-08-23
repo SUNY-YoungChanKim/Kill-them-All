@@ -16,7 +16,7 @@ public class DatarecordMove : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        transform.Translate(Vector3.back * Time.deltaTime*Speed);
+        transform.Translate(Vector3.back * Time.deltaTime * Speed);
 
      
         if(this.gameObject.transform.position.z-this.gameObject.transform.parent.position.z<=EndzPos)

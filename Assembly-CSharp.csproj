@@ -40,10 +40,13 @@
      <Compile Include="Assets\Scripts\SkyboxRotate.cs" />
      <Compile Include="Assets\Scripts\DatarecordMove.cs" />
      <Compile Include="Assets\Scripts\SimpleCameraController.cs" />
+     <Compile Include="Assets\Scripts\UIController.cs" />
      <Compile Include="Assets\Scripts\Rotate.cs" />
      <Compile Include="Assets\Scripts\RecordDeleter.cs" />
-     <Compile Include="Assets\Presets\Hands\Hand.cs" />
      <Compile Include="Assets\Presets\Hands\HandController.cs" />
+     <Compile Include="Assets\Presets\Hands\Hand.cs" />
+     <Compile Include="Assets\Scripts\ObjectDestory.cs" />
+     <Compile Include="Assets\UI\UIhandler.cs" />
      <None Include="Assets\Materials\Arclighting\shader_animatingTile.shader" />
      <None Include="Assets\SkySerie Freebie\Hdri setup.txt" />
     <Reference Include="UnityEngine">

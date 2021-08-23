@@ -17,8 +17,6 @@ public class RecordDeleter : MonoBehaviour
     }
     private void OnCollisionEnter(Collision collision)
     {
-        Debug.Log("Enter!");
-
         Destroy(collision.gameObject);
 
     }

@@ -12,6 +12,7 @@ public class HandController : MonoBehaviour
     void Start()
     {
         controller = GetComponent<ActionBasedController>();
+        
     }
 
     // Update is called once per frame
@@ -19,6 +20,8 @@ public class HandController : MonoBehaviour
     {
        hand.SetGrip(controller.selectAction.action.ReadValue<float>());
        hand.SetTrigger(controller.activateAction.action.ReadValue<float>());
+
+       
 
     }
 }
