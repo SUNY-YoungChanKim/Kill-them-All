@@ -38,6 +38,7 @@
   <ItemGroup>
      <Compile Include="Assets\Scripts\Recordcreater.cs" />
      <Compile Include="Assets\Scripts\SkyboxRotate.cs" />
+     <Compile Include="Assets\Scripts\TurnManager.cs" />
      <Compile Include="Assets\Scripts\DatarecordMove.cs" />
      <Compile Include="Assets\Scripts\SimpleCameraController.cs" />
      <Compile Include="Assets\Scripts\ButtonsController.cs" />
@@ -50,6 +51,7 @@
      <Compile Include="Assets\Scripts\Hand.cs" />
      <Compile Include="Assets\Scripts\UIController.cs" />
      <Compile Include="Assets\Scripts\SaveData.cs" />
+     <Compile Include="Assets\Scripts\Follow.cs" />
      <None Include="Assets\Materials\Arclighting\shader_animatingTile.shader" />
     <Reference Include="UnityEngine">
         <HintPath>D:/Program Files (x86)/2020.3.14f1/Editor/Data/Managed/UnityEngine/UnityEngine.dll</HintPath>

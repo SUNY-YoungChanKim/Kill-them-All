@@ -76,4 +76,8 @@ public class SaveData : MonoBehaviour
     {
         return dataset.Primaryhand;
     }
+    public int getTurnMethod()
+    {
+        return dataset.TurnMethod;
+    }
 }

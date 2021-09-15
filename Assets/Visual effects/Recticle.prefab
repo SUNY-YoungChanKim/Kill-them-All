@@ -95,6 +95,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rotateSpeed: 300
+  yAxis: 1
 --- !u!1 &1271735530086726430
 GameObject:
   m_ObjectHideFlags: 0
@@ -224,6 +225,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rotateSpeed: 300
+  yAxis: 1
 --- !u!1 &1271735530311582926
 GameObject:
   m_ObjectHideFlags: 0
@@ -319,6 +321,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rotateSpeed: 300
+  yAxis: 1
 --- !u!1 &1271735530383409716
 GameObject:
   m_ObjectHideFlags: 0
@@ -414,6 +417,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rotateSpeed: 300
+  yAxis: 1
 --- !u!1 &1271735530462058897
 GameObject:
   m_ObjectHideFlags: 0
@@ -509,6 +513,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rotateSpeed: 300
+  yAxis: 1
 --- !u!1 &1271735530612639341
 GameObject:
   m_ObjectHideFlags: 0
@@ -604,6 +609,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rotateSpeed: 300
+  yAxis: 1
 --- !u!1 &1271735530667066356
 GameObject:
   m_ObjectHideFlags: 0
@@ -699,6 +705,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rotateSpeed: 300
+  yAxis: 1
 --- !u!1 &1271735530838481320
 GameObject:
   m_ObjectHideFlags: 0
@@ -794,6 +801,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rotateSpeed: 300
+  yAxis: 1
 --- !u!1 &1271735531050052609
 GameObject:
   m_ObjectHideFlags: 0
@@ -923,6 +931,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rotateSpeed: 300
+  yAxis: 1
 --- !u!1 &1271735531388010444
 GameObject:
   m_ObjectHideFlags: 0
@@ -1086,6 +1095,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rotateSpeed: 300
+  yAxis: 1
 --- !u!1 &1271735531489168368
 GameObject:
   m_ObjectHideFlags: 0
@@ -1181,6 +1191,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rotateSpeed: 300
+  yAxis: 1
 --- !u!1 &1271735531517128604
 GameObject:
   m_ObjectHideFlags: 0
@@ -1276,6 +1287,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rotateSpeed: 300
+  yAxis: 1
 --- !u!1 &1271735531560966241
 GameObject:
   m_ObjectHideFlags: 0
@@ -1371,6 +1383,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rotateSpeed: 300
+  yAxis: 1
 --- !u!1 &1271735531635210837
 GameObject:
   m_ObjectHideFlags: 0
@@ -1466,6 +1479,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rotateSpeed: 300
+  yAxis: 1
 --- !u!1 &1271735531955937283
 GameObject:
   m_ObjectHideFlags: 0
@@ -1561,6 +1575,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rotateSpeed: 300
+  yAxis: 1
 --- !u!1 &1271735532026963718
 GameObject:
   m_ObjectHideFlags: 0
@@ -1656,6 +1671,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rotateSpeed: 300
+  yAxis: 1
 --- !u!1 &1271735532071253146
 GameObject:
   m_ObjectHideFlags: 0
