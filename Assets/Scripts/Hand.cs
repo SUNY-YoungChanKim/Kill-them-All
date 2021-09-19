@@ -5,6 +5,7 @@ using UnityEngine;
 [RequireComponent(typeof(Animator))]
 public class Hand : MonoBehaviour
 {
+    [SerializeField] private GameObject Model;
     public float speed;
 
     Animator animator;
@@ -39,11 +40,22 @@ public class Hand : MonoBehaviour
         {
             gripCurrent = Mathf.MoveTowards(gripCurrent,gripTarget,Time.deltaTime*speed);
             animator.SetFloat(GripParam,gripCurrent);
+            if(Model.GetComponent<CapsuleCollider>().enabled==true)
+            {
+                Model.GetComponent<SphereCollider>().enabled=true;
+                Model.GetComponent<CapsuleCollider>().enabled=false;
+
+            }
         }        
         if(triggerCurrent!=triggerTarget)
         {
             triggerCurrent = Mathf.MoveTowards(triggerCurrent,triggerTarget,Time.deltaTime*speed);
             animator.SetFloat(TriggerParam,triggerCurrent);
+            if(Model.GetComponent<SphereCollider>().enabled==true)
+            {
+                Model.GetComponent<SphereCollider>().enabled=false;
+                Model.GetComponent<CapsuleCollider>().enabled=true;
+            }
         }
     }
 }

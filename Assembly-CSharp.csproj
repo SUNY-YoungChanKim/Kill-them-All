@@ -49,9 +49,11 @@
      <Compile Include="Assets\Scripts\HandController.cs" />
      <Compile Include="Assets\Scripts\TeleportManager.cs" />
      <Compile Include="Assets\Scripts\Hand.cs" />
+     <Compile Include="Assets\Scripts\Follow.cs" />
      <Compile Include="Assets\Scripts\UIController.cs" />
      <Compile Include="Assets\Scripts\SaveData.cs" />
-     <Compile Include="Assets\Scripts\Follow.cs" />
+     <Compile Include="Assets\Scripts\AlphaBlink.cs" />
+     <Compile Include="Assets\Scripts\OOWCameraChange.cs" />
      <None Include="Assets\Materials\Arclighting\shader_animatingTile.shader" />
     <Reference Include="UnityEngine">
         <HintPath>D:/Program Files (x86)/2020.3.14f1/Editor/Data/Managed/UnityEngine/UnityEngine.dll</HintPath>
