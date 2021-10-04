@@ -16,6 +16,7 @@ public class AlphaBlink : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+   
         if(fadein==true)
         {
             Default.a-=Time.deltaTime*1.0f;
@@ -24,7 +25,7 @@ public class AlphaBlink : MonoBehaviour
         else
         {
             Default.a+=Time.deltaTime*1.0f;
-            if(Default.a>=255)fadein=true;
+            if(Default.a>=1)fadein=true;
         }
         this.GetComponent<SpriteRenderer>().color=Default;
     }

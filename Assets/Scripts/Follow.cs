@@ -32,12 +32,11 @@ public class Follow : MonoBehaviour
     }
     private void OnCollisionEnter(Collision other) 
     {   
-        Debug.Log(other.gameObject.name);
         follow=false;
     }
    private void OnCollisionExit(Collision other) 
     {
-        Debug.Log("Exit");
+
         follow=true;   
     }
 }

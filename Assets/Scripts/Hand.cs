@@ -38,24 +38,29 @@ public class Hand : MonoBehaviour
     {
         if(gripCurrent!=gripTarget)
         {
+
+
             gripCurrent = Mathf.MoveTowards(gripCurrent,gripTarget,Time.deltaTime*speed);
             animator.SetFloat(GripParam,gripCurrent);
+            if(Model.GetComponent<SphereCollider>().enabled==true)
+            {
+                Model.GetComponent<SphereCollider>().enabled=false;
+                Model.GetComponent<CapsuleCollider>().enabled=true;
+            }
+        }        
+        if(triggerCurrent!=triggerTarget)
+        {
+            
+            triggerCurrent = Mathf.MoveTowards(triggerCurrent,triggerTarget,Time.deltaTime*speed);
+            animator.SetFloat(TriggerParam,triggerCurrent);
+
             if(Model.GetComponent<CapsuleCollider>().enabled==true)
             {
                 Model.GetComponent<SphereCollider>().enabled=true;
                 Model.GetComponent<CapsuleCollider>().enabled=false;
 
             }
-        }        
-        if(triggerCurrent!=triggerTarget)
-        {
-            triggerCurrent = Mathf.MoveTowards(triggerCurrent,triggerTarget,Time.deltaTime*speed);
-            animator.SetFloat(TriggerParam,triggerCurrent);
-            if(Model.GetComponent<SphereCollider>().enabled==true)
-            {
-                Model.GetComponent<SphereCollider>().enabled=false;
-                Model.GetComponent<CapsuleCollider>().enabled=true;
-            }
+            
         }
     }
 }

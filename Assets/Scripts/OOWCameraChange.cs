@@ -18,12 +18,20 @@ public class OOWCameraChange : MonoBehaviour
     }  
     private void OnCollisionEnter(Collision other) 
     {
-        this.GetComponent<Camera>().enabled=false;
-        Subcam.SetActive(true);
+
+        if(other.gameObject.tag=="Block")
+        {
+            this.GetComponent<Camera>().enabled=false;
+            Subcam.SetActive(true);
+        }
     }
     private void OnCollisionExit(Collision other) 
     {
-        this.GetComponent<Camera>().enabled=true;
-        Subcam.SetActive(false);
+        if(other.gameObject.tag=="Block")
+        {
+            this.GetComponent<Camera>().enabled=true;
+            Subcam.SetActive(false);
+        }
     }
+
 }
