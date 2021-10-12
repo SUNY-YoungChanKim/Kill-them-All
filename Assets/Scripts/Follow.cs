@@ -36,7 +36,6 @@ public class Follow : MonoBehaviour
     }
    private void OnCollisionExit(Collision other) 
     {
-
         follow=true;   
     }
 }

@@ -19,12 +19,12 @@ public class AlphaBlink : MonoBehaviour
    
         if(fadein==true)
         {
-            Default.a-=Time.deltaTime*1.0f;
+            Default.a-=Time.deltaTime*speed;
             if(Default.a<=0)fadein=false;
         }
         else
         {
-            Default.a+=Time.deltaTime*1.0f;
+            Default.a+=Time.deltaTime*speed;
             if(Default.a>=1)fadein=true;
         }
         this.GetComponent<SpriteRenderer>().color=Default;

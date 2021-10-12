@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Substance.Platform", "Subst
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Unity.XR.Management.Samples", "Unity.XR.Management.Samples.csproj", "{eab51913-69ab-4ef3-0034-1227101bdebe}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Assembly-CSharp-Editor", "Assembly-CSharp-Editor.csproj", "{7960ade7-513e-9ec0-9af4-b2e3f06056b9}"
+EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Unity.XR.Management.Samples.Editor", "Unity.XR.Management.Samples.Editor.csproj", "{15fd92b1-9c44-c187-b1e6-635008ff3e4a}"
 EndProject
 Global
@@ -24,6 +26,8 @@ Global
 		{e69d06e2-4def-e811-e42e-be6170672bf4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{eab51913-69ab-4ef3-0034-1227101bdebe}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{eab51913-69ab-4ef3-0034-1227101bdebe}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7960ade7-513e-9ec0-9af4-b2e3f06056b9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7960ade7-513e-9ec0-9af4-b2e3f06056b9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{15fd92b1-9c44-c187-b1e6-635008ff3e4a}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{15fd92b1-9c44-c187-b1e6-635008ff3e4a}.Debug|Any CPU.Build.0 = Debug|Any CPU
 	EndGlobalSection
