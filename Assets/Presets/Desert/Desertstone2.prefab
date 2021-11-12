@@ -11,9 +11,10 @@ GameObject:
   - component: {fileID: 8956695892736176265}
   - component: {fileID: 5468294503522795308}
   - component: {fileID: 7784401213967207398}
-  m_Layer: 0
+  - component: {fileID: 4793559889931960548}
+  m_Layer: 11
   m_Name: Desertstone2
-  m_TagString: Untagged
+  m_TagString: Block
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -60,7 +61,6 @@ MeshRenderer:
   m_RendererPriority: 0
   m_Materials:
   - {fileID: 2100000, guid: 80173915da5bc0643a5d6b58da1094d9, type: 2}
-  - {fileID: 2100000, guid: 7238949716d639f48a64649d960744a8, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -82,3 +82,17 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!64 &4793559889931960548
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8576898615393200691}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: -951608786083511892, guid: 430fd7fb5fb032048a0c2bde2c6a30f0, type: 3}

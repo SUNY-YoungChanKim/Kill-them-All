@@ -52,8 +52,6 @@ public class UIController : MonoBehaviour
         Time.timeScale=1.0f;
         MainMenu.SetActive(false);
         UIstatus=0;
-        LeftHandController.GetComponent<XRInteractorLineVisual>().enabled=false;
-        RightHandController.GetComponent<XRInteractorLineVisual>().enabled=false;
         Reflect();
     }
     public void UIshow(InputAction.CallbackContext obj)
@@ -79,9 +77,7 @@ public class UIController : MonoBehaviour
             Locomotion.GetComponent<SnapTurnProviderBase>().enabled=false;
             Locomotion.GetComponent<ContinuousTurnProviderBase>().enabled=false;
             Locomotion.GetComponent<TeleportManager>().enabled=false; 
-
-            LeftHandController.GetComponent<XRInteractorLineVisual>().enabled=true;
-          RightHandController.GetComponent<XRInteractorLineVisual>().enabled=true;
+;
 
         }
         else if(UIstatus==1)

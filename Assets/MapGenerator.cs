@@ -31,14 +31,14 @@ public class MapGenerator : MonoBehaviour
         
         for(int i=0;i<length;i++)
         {
-            Instantiate(Blockwall, new Vector3(-250-i*250,-5,-250-100),Quaternion.Euler(-90,0,90)).transform.SetParent(this.transform);
-            Instantiate(Blockwall, new Vector3(-250-i*250,-5,-250 + length*250-150),Quaternion.Euler(-90,0,90)).transform.SetParent(this.transform);
-            Instantiate(Blockwall, new Vector3(-250-length*250+150,-5,-250 + i*250),Quaternion.Euler(-90,0,0)).transform.SetParent(this.transform);
+            Instantiate(Blockwall, new Vector3(-250-i*250,-4.5f,-250-100),Quaternion.Euler(-90,0,90)).transform.SetParent(this.transform);
+            Instantiate(Blockwall, new Vector3(-250-i*250,-4.5f,-250 + length*250-150),Quaternion.Euler(-90,0,90)).transform.SetParent(this.transform);
+            Instantiate(Blockwall, new Vector3(-250-length*250+150,-4.5f,-250 + i*250),Quaternion.Euler(-90,0,0)).transform.SetParent(this.transform);
         }
 
         for(int i=0;i<length;i++)
             if(i!=1)
-               Instantiate(Blockwall, new Vector3(-250+100,-5,-250 + i*250),Quaternion.Euler(-90,0,0)).transform.SetParent(this.transform);
+               Instantiate(Blockwall, new Vector3(-250+100,-4.5f,-250 + i*250),Quaternion.Euler(-90,0,0)).transform.SetParent(this.transform);
         
         Instantiate(Doorwall, new Vector3(-150,-5,0),Quaternion.Euler(0,0,0)).transform.SetParent(this.transform);
     }
@@ -59,7 +59,6 @@ public class MapGenerator : MonoBehaviour
             {
                 text+=field[i,j]+" ";
             }
-            Debug.Log(text);
         }
     }
     private void maze()
@@ -73,15 +72,15 @@ public class MapGenerator : MonoBehaviour
             {
 
 
-                Instantiate(Doorwall,new Vector3(-250 ,-5,-400+i*250),Quaternion.Euler(0,90,0)).transform.SetParent(this.transform);
-                Instantiate(Doorwall,new Vector3(-250 ,-5,-400+i*250+50),Quaternion.Euler(0,90,0)).transform.SetParent(this.transform);
-                Instantiate(Asile,new Vector3(-250 ,-5,-400+i*250+5),Quaternion.Euler(0,90,0)).transform.SetParent(this.transform);
+                Instantiate(Doorwall,new Vector3(-250 ,-5.5f,-400+i*250),Quaternion.Euler(0,90,0)).transform.SetParent(this.transform);
+                Instantiate(Doorwall,new Vector3(-250 ,-5.5f,-400+i*250+50),Quaternion.Euler(0,90,0)).transform.SetParent(this.transform);
+                Instantiate(Asile,new Vector3(-250 ,-33,-400+i*250+3),Quaternion.Euler(0,90,0)).transform.SetParent(this.transform);
                 field[0,i]=field[0,i-1];
             }      
             else
             {
-                Instantiate(Blockwall,new Vector3(-250,-5,-400+i*250),Quaternion.Euler(-90,0,90)).transform.SetParent(this.transform);
-                Instantiate(Blockwall,new Vector3(-250 ,-5,-400+i*250+50),Quaternion.Euler(-90,0,90)).transform.SetParent(this.transform);
+                Instantiate(Blockwall,new Vector3(-250,-4.5f,-400+i*250),Quaternion.Euler(-90,0,90)).transform.SetParent(this.transform);
+                Instantiate(Blockwall,new Vector3(-250 ,-4.5f,-400+i*250+50),Quaternion.Euler(-90,0,90)).transform.SetParent(this.transform);
             }
         }
         for(int i=0;i<length;)
@@ -109,14 +108,14 @@ public class MapGenerator : MonoBehaviour
         {
             if(field[0,i]==field[1,i])
             {
-                Instantiate(Doorwall,new Vector3(-350,-7,-250+i*250),Quaternion.Euler(0,180,0)).transform.SetParent(this.transform);
-                Instantiate(Doorwall,new Vector3(-400,-7,-250+i*250),Quaternion.Euler(0,180,0)).transform.SetParent(this.transform);
-                Instantiate(Asile,new Vector3(-367,-5,-250+i*250),Quaternion.Euler(0,0,0)).transform.SetParent(this.transform);
+                Instantiate(Doorwall,new Vector3(-350,-5.5f,-250+i*250),Quaternion.Euler(0,180,0)).transform.SetParent(this.transform);
+                Instantiate(Doorwall,new Vector3(-400,-5.5f,-250+i*250),Quaternion.Euler(0,180,0)).transform.SetParent(this.transform);
+                Instantiate(Asile,new Vector3(-350,-33,-250+i*250),Quaternion.Euler(0,0,0)).transform.SetParent(this.transform);
             }
             else
             {
-                Instantiate(Blockwall,new Vector3(-350,-7,-250+i*250),Quaternion.Euler(-90,0,180)).transform.SetParent(this.transform);
-                Instantiate(Blockwall,new Vector3(-400,-7,-250+i*250),Quaternion.Euler(-90,0,180)).transform.SetParent(this.transform);
+                Instantiate(Blockwall,new Vector3(-350,-4.5f,-250+i*250),Quaternion.Euler(-90,0,180)).transform.SetParent(this.transform);
+                Instantiate(Blockwall,new Vector3(-400,-4.5f,-250+i*250),Quaternion.Euler(-90,0,180)).transform.SetParent(this.transform);
             }
         }
 
@@ -179,35 +178,35 @@ public class MapGenerator : MonoBehaviour
                 {
                     if(field[i,j]==field[i,j+1])
                     {
-                        Instantiate(Doorwall,new Vector3(-250-i*250,-5,-150+j*250),Quaternion.Euler(0,90,0)).transform.SetParent(this.transform);
-                        Instantiate(Doorwall,new Vector3(-250-i*250,-5,-150+j*250+50),Quaternion.Euler(0,90,0)).transform.SetParent(this.transform);
-                        Instantiate(Asile,new Vector3(-250-i*250,-5,-150+j*250+5),Quaternion.Euler(0,90,0)).transform.SetParent(this.transform);
+                        Instantiate(Doorwall,new Vector3(-250-i*250,-5.5f,-150+j*250),Quaternion.Euler(0,90,0)).transform.SetParent(this.transform);
+                        Instantiate(Doorwall,new Vector3(-250-i*250,-5.5f,-150+j*250+50),Quaternion.Euler(0,90,0)).transform.SetParent(this.transform);
+                        Instantiate(Asile,new Vector3(-250-i*250,-33,-150+j*250+3),Quaternion.Euler(0,90,0)).transform.SetParent(this.transform);
                     }
                     else
                     {
                         if(Random.Range(0,2)==0)
                         {
-                            Instantiate(Blockwall,new Vector3(-250-i*250,-5,-150+j*250),Quaternion.Euler(-90,0,90)).transform.SetParent(this.transform);
-                            Instantiate(Blockwall,new Vector3(-250-i*250,-5,-150+j*250+50),Quaternion.Euler(-90,0,90)).transform.SetParent(this.transform);
+                            Instantiate(Blockwall,new Vector3(-250-i*250,-4.5f,-150+j*250),Quaternion.Euler(-90,0,90)).transform.SetParent(this.transform);
+                            Instantiate(Blockwall,new Vector3(-250-i*250,-4.5f,-150+j*250+50),Quaternion.Euler(-90,0,90)).transform.SetParent(this.transform);
                         }
                         else
                         {
-                            Instantiate(Doorwall,new Vector3(-250-i*250,-5,-150+j*250),Quaternion.Euler(0,90,0)).transform.SetParent(this.transform);
-                            Instantiate(Doorwall,new Vector3(-250-i*250,-5,-150+j*250+50),Quaternion.Euler(0,90,0)).transform.SetParent(this.transform);
-                            Instantiate(Asile,new Vector3(-250-i*250,-5,-150+j*250+5),Quaternion.Euler(0,90,0)).transform.SetParent(this.transform);
+                            Instantiate(Doorwall,new Vector3(-250-i*250,-5.5f,-150+j*250),Quaternion.Euler(0,90,0)).transform.SetParent(this.transform);
+                            Instantiate(Doorwall,new Vector3(-250-i*250,-5.5f,-150+j*250+50),Quaternion.Euler(0,90,0)).transform.SetParent(this.transform);
+                            Instantiate(Asile,new Vector3(-250-i*250,-33,-150+j*250+3),Quaternion.Euler(0,90,0)).transform.SetParent(this.transform);
                         }
                     }
                 }
                 if(field[i,j]==field[i+1,j])
                 {
-                    Instantiate(Doorwall,new Vector3(-350-i*250,-7,-250+j*250),Quaternion.Euler(0,180,0)).transform.SetParent(this.transform);
-                    Instantiate(Doorwall,new Vector3(-400-i*250,-7,-250+j*250),Quaternion.Euler(0,180,0)).transform.SetParent(this.transform);
-                    Instantiate(Asile,new Vector3(-367-i*250,-5,-250+j*250),Quaternion.Euler(0,0,0)).transform.SetParent(this.transform);
+                    Instantiate(Doorwall,new Vector3(-350-i*250,-5.5f,-250+j*250),Quaternion.Euler(0,180,0)).transform.SetParent(this.transform);
+                    Instantiate(Doorwall,new Vector3(-400-i*250,-5.5f,-250+j*250),Quaternion.Euler(0,180,0)).transform.SetParent(this.transform);
+                    Instantiate(Asile,new Vector3(-350-i*250,-33,-250+j*250),Quaternion.Euler(0,0,0)).transform.SetParent(this.transform);
                 }
                 else
                 {
-                    Instantiate(Blockwall,new Vector3(-350-i*250,-7,-250+j*250),Quaternion.Euler(-90,0,180)).transform.SetParent(this.transform);
-                    Instantiate(Blockwall,new Vector3(-400-i*250,-7,-250+j*250),Quaternion.Euler(-90,0,180)).transform.SetParent(this.transform);
+                    Instantiate(Blockwall,new Vector3(-350-i*250,-4.5f,-250+j*250),Quaternion.Euler(-90,0,180)).transform.SetParent(this.transform);
+                    Instantiate(Blockwall,new Vector3(-400-i*250,-4.5f,-250+j*250),Quaternion.Euler(-90,0,180)).transform.SetParent(this.transform);
                 }
                 
             }
@@ -215,9 +214,9 @@ public class MapGenerator : MonoBehaviour
         for(int j=0;j<length-1;j++)
         {
             field[length-1,j]=0;
-            Instantiate(Doorwall,new Vector3(-250-(length-1)*250,-5,-150+j*250),Quaternion.Euler(0,90,0)).transform.SetParent(this.transform);
-            Instantiate(Doorwall,new Vector3(-250-(length-1)*250,-5,-150+j*250+50),Quaternion.Euler(0,90,0)).transform.SetParent(this.transform);
-            Instantiate(Asile,new Vector3(-250-(length-1)*250,-5,-150+j*250+5),Quaternion.Euler(0,90,0)).transform.SetParent(this.transform);
+            Instantiate(Doorwall,new Vector3(-250-(length-1)*250,-5.5f,-150+j*250),Quaternion.Euler(0,90,0)).transform.SetParent(this.transform);
+            Instantiate(Doorwall,new Vector3(-250-(length-1)*250,-5.5f,-150+j*250+50),Quaternion.Euler(0,90,0)).transform.SetParent(this.transform);
+            Instantiate(Asile,new Vector3(-250-(length-1)*250,-33,-150+j*250+3),Quaternion.Euler(0,90,0)).transform.SetParent(this.transform);
         }
         
 

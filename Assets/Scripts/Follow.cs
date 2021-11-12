@@ -27,15 +27,7 @@ public class Follow : MonoBehaviour
         else
         target.transform.Rotate(new Vector3(0,-180,60));
         }
-        //this.transform.localEulerAngles = new Vector3(target.transform.rotation.x,target.transform.rotation.y,target.transform.rotation.z);
 
     }
-    private void OnCollisionEnter(Collision other) 
-    {   
-        follow=false;
-    }
-   private void OnCollisionExit(Collision other) 
-    {
-        follow=true;   
-    }
+
 }

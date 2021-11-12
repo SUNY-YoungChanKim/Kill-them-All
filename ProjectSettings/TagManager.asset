@@ -5,6 +5,18 @@ TagManager:
   serializedVersion: 2
   tags:
   - Block
+  - Weapon
+  - StatusManager
+  - LDoor
+  - RDoor
+  - Monster
+  - LHand
+  - RHand
+  - HitEffect
+  - PoisonEffect
+  - XRRig
+  - SPawner
+  - Bullet
   layers:
   - Default
   - TransparentFX
@@ -17,14 +29,14 @@ TagManager:
   - VisualEffect
   - Wall
   - Tile
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
+  - Object
+  - Monster
+  - Cactus
+  - Tree
+  - Goblin
+  - Snake
+  - Spanwer
+  - Shield
   - 
   - 
   - 

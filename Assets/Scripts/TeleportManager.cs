@@ -7,10 +7,10 @@ public class TeleportManager : MonoBehaviour
 {
     [SerializeField] private InputActionAsset actionAsset;
     private XRRayInteractor rayInteractor;
-    private XRInteractorLineVisual rayLineVisual;
     [SerializeField] private TeleportationProvider provider; 
     private InputAction activate,cancel,Thumbstick;
-    private bool _isActive;
+    public bool _isActive;
+
     // Start is called before the first frame update
 
     public void HandReflect()
@@ -28,7 +28,6 @@ public class TeleportManager : MonoBehaviour
         if(GameObject.Find("DataManager").GetComponent<SaveData>().getHand()==0)
         {
             rayInteractor = GameObject.Find("LeftHand Controller").GetComponent<XRRayInteractor>();
-            rayLineVisual =  GameObject.Find("LeftHand Controller").GetComponent<XRInteractorLineVisual>();
             
             activate= actionAsset.FindActionMap("XRI LeftHand").FindAction("Teleport Mode Activate");
             activate.Enable();
@@ -45,7 +44,6 @@ public class TeleportManager : MonoBehaviour
         else
         {
             rayInteractor = GameObject.Find("RightHand Controller").GetComponent<XRRayInteractor>();
-            rayLineVisual =  GameObject.Find("RightHand Controller").GetComponent<XRInteractorLineVisual>();
             
             activate= actionAsset.FindActionMap("XRI RightHand").FindAction("Teleport Mode Activate");
             
@@ -85,7 +83,6 @@ public class TeleportManager : MonoBehaviour
         hit.transform.gameObject.layer != LayerMask.NameToLayer("Tile"))
         {
      
-            rayLineVisual.enabled=false;
             _isActive=false;
             return;
         }
@@ -96,20 +93,17 @@ public class TeleportManager : MonoBehaviour
         };
 
         provider.QueueTeleportRequest(request);
-        rayLineVisual.enabled=false;
         _isActive =false;
     }
 
     private void OnTeleportActivate(InputAction.CallbackContext context)
     {
         if(this.GetComponent<TeleportManager>().enabled==false)return;
-        rayLineVisual.enabled=true;
         _isActive = true;
     }
     private void OnTeleportCancel(InputAction.CallbackContext context)
     {
         if(this.GetComponent<TeleportManager>().enabled==false)return;
-        rayLineVisual.enabled=false;
         _isActive =false;
     }
 }

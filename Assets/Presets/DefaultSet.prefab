@@ -1383,6 +1383,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   actionAsset: {fileID: -944628639613478452, guid: c348712bda248c246b8c49b3db54643f, type: 3}
   provider: {fileID: 2215738677741152417}
+  _isActive: 0
 --- !u!1 &1226810886771854935
 GameObject:
   m_ObjectHideFlags: 0
@@ -4444,7 +4445,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Model: {fileID: 4734292353640525878}
-  speed: 8
+  speed: 5
 --- !u!1 &4734292352772040259
 GameObject:
   m_ObjectHideFlags: 0
@@ -5043,7 +5044,7 @@ CapsuleCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   m_Radius: 0.05
-  m_Height: 0.37
+  m_Height: 0.25
   m_Direction: 2
   m_Center: {x: -0.01, y: 0.03, z: 0}
 --- !u!114 &4734292352877610022
@@ -5223,7 +5224,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Model: {fileID: 4734292352877610014}
-  speed: 8
+  speed: 5
 --- !u!1 &4734292353220649397
 GameObject:
   m_ObjectHideFlags: 0
@@ -5832,7 +5833,7 @@ CapsuleCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   m_Radius: 0.05
-  m_Height: 0.37
+  m_Height: 0.25
   m_Direction: 2
   m_Center: {x: -0.01, y: 0.03, z: 0}
 --- !u!135 &4734292353640525880
