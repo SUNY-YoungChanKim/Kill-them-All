@@ -17,6 +17,7 @@ TagManager:
   - XRRig
   - SPawner
   - Bullet
+  - GB
   layers:
   - Default
   - TransparentFX
@@ -33,11 +34,11 @@ TagManager:
   - Monster
   - Cactus
   - Tree
-  - Goblin
-  - Snake
+  - Hyena
+  - Lizard
   - Spanwer
   - Shield
-  - 
+  - GrabbaleBullet
   - 
   - 
   - 

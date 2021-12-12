@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class Weapon : MonoBehaviour
 {
-    [SerializeField] private float Damage;
     [SerializeField] private string RotateAxis="X";
     [SerializeField] private float RotateSpeed=1;
     [SerializeField] private GameObject HitEffect;
@@ -24,8 +23,13 @@ public class Weapon : MonoBehaviour
 
 
     }
+    public void statuschange(string x)
+    {
+        Status=x;
+    }
     private void OnCollisionEnter(Collision other)
      {
+         Debug.Log(Status);
         if(other.transform.tag=="LHand")
         {
             Status="Lgrip";
@@ -37,11 +41,10 @@ public class Weapon : MonoBehaviour
 
         if(other.transform.tag=="Monster"&&(Status=="Lgrip"||Status=="Rgrip"||Status=="Throw"))
         {
-            if(other.gameObject.GetComponent<MonsterAI>().Hit(Damage)==true)
-            {
-                Instantiate(HitEffect,other.gameObject.transform.position,Quaternion.Euler(getAngles()-60,other.transform.rotation.eulerAngles.y+100,0));
-                other.gameObject.GetComponent<Rigidbody>().AddForce(new Vector3(0,0,2),ForceMode.Impulse);
-            }            
+            other.gameObject.GetComponent<MonsterAI>().Dead(); 
+            Instantiate(HitEffect,other.gameObject.transform.position,Quaternion.Euler(getAngles()-60,other.transform.rotation.eulerAngles.y+100,0));
+            other.gameObject.GetComponent<Rigidbody>().AddForce(new Vector3(0,0,2),ForceMode.Impulse);
+                
         }
 
         if(Status=="Throw"&&(other.transform.tag!="LHand"&&other.transform.tag!="RHand"))

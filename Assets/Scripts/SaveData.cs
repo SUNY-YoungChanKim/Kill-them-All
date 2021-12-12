@@ -70,6 +70,7 @@ public class SaveData : MonoBehaviour
     }
     public string GetPath()
     {
+        //Debug.Log(Application.persistentDataPath);
         return Path.Combine(Application.persistentDataPath, "1.sv");
     }
     public int getHand()

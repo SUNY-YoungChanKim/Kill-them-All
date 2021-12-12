@@ -10,7 +10,6 @@ public class MonsterAI : MonoBehaviour
     [SerializeField] private float AttackCoolTime;
     [SerializeField] private float AttackDistance;
     [SerializeField] private GameObject AttakPos;
-    [SerializeField] private float Hp;
     [SerializeField] private AudioSource HitSound;
     private GameObject StatusManager;
 
@@ -20,10 +19,12 @@ public class MonsterAI : MonoBehaviour
 
     private float Distance;
     private string State="Caculate";
+    private float MovingSpeed;
     // Start is called before the first frame update
     void Start()
     {
-        NavMesh=GetComponent<NavMeshAgent>();   
+        NavMesh=GetComponent<NavMeshAgent>();  
+        MovingSpeed=NavMesh.speed;
         Player=GameObject.FindGameObjectWithTag("Player");
         Animator=this.GetComponent<Animator>();
         StatusManager=GameObject.Find("StatusManager");
@@ -33,49 +34,41 @@ public class MonsterAI : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        NavMesh.destination = Player.transform.position;
         if(State=="Caculate")
         {
             Distance= Mathf.Sqrt(Mathf.Pow(Mathf.Abs(this.transform.position.x - Player.transform.position.x),2)
                     +Mathf.Pow(Mathf.Abs(this.transform.position.z - Player.transform.position.z),2));
-            if(Distance>AttackDistance)
-            {
-                if(NavMesh.enabled==false) 
-                    NavMesh.enabled=true;
-                NavMesh.destination = Player.transform.position;
-                Animator.SetTrigger("Walk");
-            }
-            else
-            {
-                NavMesh.enabled=false;
 
+           if(Distance>AttackDistance)
+            {
+                NavMesh.speed=MovingSpeed;
+
+                Animator.SetInteger("Status",1);
+            }
+            else  
+            {
+                NavMesh.speed=0.1f;
                 if(CanAttack==true)
                 {
                     State="Attacking";
-                    Animator.SetTrigger("Attack");
+                    Animator.SetInteger("Status",2);
                 }
-
-
             }
-
         }
-
     }
     public void SetCaculateStatus()
     {
         State="Caculate";
-        Animator.SetTrigger("Stand");
+        Animator.SetInteger("Status",0);
     }
     public void Fire()
     {
-
-
-        if(State!="Hit")
+        if(State!="Dying")
         {
             GameObject t =Instantiate(Bullet,AttakPos.transform.position,Quaternion.Euler(-90,0,this.transform.rotation.eulerAngles.y+100));
             if(t.GetComponent<Bullet>()!=null)t.GetComponent<Bullet>().Init(Player.transform.position);
         }
-
-
 
        CanAttack=false;
        Invoke("CanAttackChange",AttackCoolTime);
@@ -92,24 +85,9 @@ public class MonsterAI : MonoBehaviour
         StatusManager.GetComponent<CountMonsters>().Decrease();
     }
 
-    public bool Hit(float damage)
+    public void Dead()
     {
-        if(State!="Hit")
-        {
-            Hp-=damage;
-            if(HitSound.isPlaying==false)HitSound.Play();
-            if(Hp>0)
-            {
-                State="Hit";
-                Animator.SetTrigger("Hit");
-            }
-            else
-            {
-                State="Dying";
-                Animator.SetTrigger("Dead");
-            }
-            return true;
-        }
-        else return false;
+        State="Dying";
+        Animator.SetInteger("Status",3);
     }
 }
