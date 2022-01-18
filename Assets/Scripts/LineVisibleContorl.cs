@@ -18,7 +18,7 @@ public class LineVisibleContorl : MonoBehaviour
     {
         if(XRRayInteractor.TryGetCurrent3DRaycastHit(out RaycastHit hit))
         {
-            if(hit.collider.gameObject.tag=="Weapon" || hit.collider.gameObject.tag=="GB")
+            if(hit.collider.gameObject.tag=="Weapon" || hit.collider.gameObject.tag=="GB"||hit.collider.gameObject.tag=="Syringe")
             {
                 this.GetComponent<XRInteractorLineVisual>().enabled=true;
             }

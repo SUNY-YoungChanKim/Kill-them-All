@@ -13,8 +13,9 @@ public class MeshVisibleControl : MonoBehaviour
     {
         if(RayInteractor.TryGetCurrent3DRaycastHit(out RaycastHit hit))
         {
-            if(hit.transform.gameObject.tag=="Weapon")
+            if(hit.transform.gameObject.tag=="Weapon"||hit.transform.gameObject.tag=="Syringe")
                 HandModel.GetComponent<SkinnedMeshRenderer>().enabled=false;
+
         }
     }
     public void MeshShow()

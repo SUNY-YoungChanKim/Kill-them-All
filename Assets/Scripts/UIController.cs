@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.UI;
-using UnityEngine.InputSystem;
+
 using UnityEngine.XR.Interaction.Toolkit;
 
 public class UIController : MonoBehaviour

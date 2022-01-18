@@ -89,7 +89,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 89c671dfb61245c44bfc7ec40d95bdb1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Speed: 5
+  Speed: 10
   set: 0
   HitEffectName: 
 --- !u!114 &344881361308163324
@@ -231,6 +231,15 @@ MonoBehaviour:
   RotateAxis: X
   RotateSpeed: 1
   HitEffect: {fileID: 0}
+  rank: 0
+  Skillset:
+    SkillImage: {fileID: 0}
+    SkillName: 
+    CoolTime: 0
+    SkillFun:
+      m_PersistentCalls:
+        m_Calls: []
+    Cooldown: 0
 --- !u!1 &1750670000051969612
 GameObject:
   m_ObjectHideFlags: 0

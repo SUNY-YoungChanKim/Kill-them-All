@@ -1,5 +1,44 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-8882926292784361945
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6b3d386ba5cd94485973aee1479b272e, type: 3}
+  m_Name: BLForCoin
+  m_EditorClassIdentifier: 
+  m_Active: 1
+  settings:
+    passTag: BLForCoin
+    Event: 450
+    filterSettings:
+      RenderQueueType: 0
+      LayerMask:
+        serializedVersion: 2
+        m_Bits: 8388608
+      PassNames: []
+    overrideMaterial: {fileID: 2100000, guid: bfe332daa5fcd4140aa3bf9ddfe940d4, type: 2}
+    overrideMaterialPassIndex: 0
+    overrideDepthState: 0
+    depthCompareFunction: 4
+    enableWrite: 1
+    stencilSettings:
+      overrideStencilState: 0
+      stencilReference: 0
+      stencilCompareFunction: 8
+      passOperation: 0
+      failOperation: 0
+      zFailOperation: 0
+    cameraSettings:
+      overrideCamera: 0
+      restoreCamera: 1
+      offset: {x: 0, y: 0, z: 0, w: 0}
+      cameraFieldOfView: 60
 --- !u!114 &-6076027023671765809
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15,7 +54,7 @@ MonoBehaviour:
   m_Active: 1
   settings:
     passTag: BLForLizard
-    Event: 300
+    Event: 450
     filterSettings:
       RenderQueueType: 0
       LayerMask:
@@ -23,6 +62,45 @@ MonoBehaviour:
         m_Bits: 65536
       PassNames: []
     overrideMaterial: {fileID: 2100000, guid: 22fd93502288cf847bd990484ad9b676, type: 2}
+    overrideMaterialPassIndex: 0
+    overrideDepthState: 0
+    depthCompareFunction: 4
+    enableWrite: 1
+    stencilSettings:
+      overrideStencilState: 0
+      stencilReference: 0
+      stencilCompareFunction: 8
+      passOperation: 0
+      failOperation: 0
+      zFailOperation: 0
+    cameraSettings:
+      overrideCamera: 0
+      restoreCamera: 1
+      offset: {x: 0, y: 0, z: 0, w: 0}
+      cameraFieldOfView: 60
+--- !u!114 &-5580674169317510668
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6b3d386ba5cd94485973aee1479b272e, type: 3}
+  m_Name: BLForCrate
+  m_EditorClassIdentifier: 
+  m_Active: 1
+  settings:
+    passTag: BLForCrate
+    Event: 450
+    filterSettings:
+      RenderQueueType: 0
+      LayerMask:
+        serializedVersion: 2
+        m_Bits: 2097152
+      PassNames: []
+    overrideMaterial: {fileID: 2100000, guid: 4dc1faadf4cb2ac4c8d52243c5b7710c, type: 2}
     overrideMaterialPassIndex: 0
     overrideDepthState: 0
     depthCompareFunction: 4
@@ -54,7 +132,7 @@ MonoBehaviour:
   m_Active: 1
   settings:
     passTag: BLForTree
-    Event: 300
+    Event: 450
     filterSettings:
       RenderQueueType: 0
       LayerMask:
@@ -101,7 +179,10 @@ MonoBehaviour:
   - {fileID: 2582820702571657036}
   - {fileID: -6076027023671765809}
   - {fileID: 6905609815937880611}
-  m_RendererFeatureMap: afb0270f9ff9b211327ebc273de49f49c804e91b9f506427c1e38c22ddd1317f0d3fb3a9f6fbc4e04a389f4cd8824f026624ee27b43dca324cf74e9fbe05d823cfd45e389d9dadab23926d448aa7d55f
+  - {fileID: -5580674169317510668}
+  - {fileID: 7546752200839531767}
+  - {fileID: -8882926292784361945}
+  m_RendererFeatureMap: afb0270f9ff9b211327ebc273de49f49c804e91b9f506427c1e38c22ddd1317f0d3fb3a9f6fbc4e04a389f4cd8824f026624ee27b43dca324cf74e9fbe05d823cfd45e389d9dadab23926d448aa7d55ff4b1a12269768db2f70cf06a2473bb68274e9cb89981b984
   postProcessData: {fileID: 11400000, guid: 41439944d30ece34e96484bdb6645b55, type: 2}
   xrSystemData: {fileID: 11400000, guid: 60e1133243b97e347b653163a8c01b64, type: 2}
   shaders:
@@ -145,7 +226,7 @@ MonoBehaviour:
   m_Active: 1
   settings:
     passTag: BLForWeapon
-    Event: 300
+    Event: 450
     filterSettings:
       RenderQueueType: 0
       LayerMask:
@@ -184,7 +265,7 @@ MonoBehaviour:
   m_Active: 1
   settings:
     passTag: BLForDesertstone
-    Event: 550
+    Event: 450
     filterSettings:
       RenderQueueType: 0
       LayerMask:
@@ -223,7 +304,7 @@ MonoBehaviour:
   m_Active: 1
   settings:
     passTag: BLForHyena
-    Event: 300
+    Event: 450
     filterSettings:
       RenderQueueType: 0
       LayerMask:
@@ -262,7 +343,7 @@ MonoBehaviour:
   m_Active: 1
   settings:
     passTag: BLForScolpion
-    Event: 300
+    Event: 450
     filterSettings:
       RenderQueueType: 0
       LayerMask:
@@ -301,7 +382,7 @@ MonoBehaviour:
   m_Active: 1
   settings:
     passTag: BLForShield
-    Event: 550
+    Event: 450
     filterSettings:
       RenderQueueType: 0
       LayerMask:
@@ -340,7 +421,7 @@ MonoBehaviour:
   m_Active: 1
   settings:
     passTag: BLForWall
-    Event: 550
+    Event: 450
     filterSettings:
       RenderQueueType: 0
       LayerMask:
@@ -349,8 +430,8 @@ MonoBehaviour:
       PassNames: []
     overrideMaterial: {fileID: 2100000, guid: 9c72f1808878d894bb2feaad5a507c72, type: 2}
     overrideMaterialPassIndex: 0
-    overrideDepthState: 0
-    depthCompareFunction: 4
+    overrideDepthState: 1
+    depthCompareFunction: 2
     enableWrite: 1
     stencilSettings:
       overrideStencilState: 0
@@ -374,19 +455,58 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6b3d386ba5cd94485973aee1479b272e, type: 3}
-  m_Name: NewRenderObjects
+  m_Name: BL For Revolver
   m_EditorClassIdentifier: 
   m_Active: 1
   settings:
-    passTag: NewRenderObjects
-    Event: 300
+    passTag: BL For Revolver
+    Event: 450
     filterSettings:
       RenderQueueType: 0
       LayerMask:
         serializedVersion: 2
-        m_Bits: 0
+        m_Bits: 1048576
       PassNames: []
-    overrideMaterial: {fileID: 0}
+    overrideMaterial: {fileID: 2100000, guid: 2aca2e6a9fddefa469e9ee0082b950fc, type: 2}
+    overrideMaterialPassIndex: 0
+    overrideDepthState: 0
+    depthCompareFunction: 4
+    enableWrite: 1
+    stencilSettings:
+      overrideStencilState: 0
+      stencilReference: 0
+      stencilCompareFunction: 8
+      passOperation: 0
+      failOperation: 0
+      zFailOperation: 0
+    cameraSettings:
+      overrideCamera: 0
+      restoreCamera: 1
+      offset: {x: 0, y: 0, z: 0, w: 0}
+      cameraFieldOfView: 60
+--- !u!114 &7546752200839531767
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6b3d386ba5cd94485973aee1479b272e, type: 3}
+  m_Name: BLForSyringe
+  m_EditorClassIdentifier: 
+  m_Active: 1
+  settings:
+    passTag: BLForSyringe
+    Event: 450
+    filterSettings:
+      RenderQueueType: 0
+      LayerMask:
+        serializedVersion: 2
+        m_Bits: 4194304
+      PassNames: []
+    overrideMaterial: {fileID: 2100000, guid: fb0502ed67efafd41ba47f08f2702f4b, type: 2}
     overrideMaterialPassIndex: 0
     overrideDepthState: 0
     depthCompareFunction: 4
@@ -418,7 +538,7 @@ MonoBehaviour:
   m_Active: 1
   settings:
     passTag: BLForCactus
-    Event: 300
+    Event: 450
     filterSettings:
       RenderQueueType: 0
       LayerMask:

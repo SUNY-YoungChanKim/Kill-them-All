@@ -1,9 +1,15 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
 public class MonsterAI : MonoBehaviour
 {
+    [Serializable] public struct GenerableItem
+    {
+        public GameObject Item;
+        public float Percent;
+    }
     private NavMeshAgent NavMesh;
     private GameObject Player;
     [SerializeField] private GameObject Bullet;
@@ -11,11 +17,14 @@ public class MonsterAI : MonoBehaviour
     [SerializeField] private float AttackDistance;
     [SerializeField] private GameObject AttakPos;
     [SerializeField] private AudioSource HitSound;
+
+    [SerializeField] private List<GenerableItem> GenerableItemList;
     private GameObject StatusManager;
 
 
     private Animator Animator;
     private bool CanAttack =true;
+    private bool ItemGenerate=false;
 
     private float Distance;
     private string State="Caculate";
@@ -78,16 +87,38 @@ public class MonsterAI : MonoBehaviour
         CanAttack=true;
     }
 
-
+    private void OnCollisionEnter(Collision other) 
+    {
+        if(other.transform.tag=="LHand"||other.transform.tag=="RHand"||other.transform.tag=="Player"||other.transform.tag=="XRRig")
+            Dead();    
+    }
     private void Destoryobj()
     {
         Destroy(this.gameObject);
         StatusManager.GetComponent<CountMonsters>().Decrease();
     }
-
+    private void GenerateItem()
+    {
+        int seed;
+        foreach(var item in GenerableItemList)
+        {
+            seed =UnityEngine.Random.Range(0,100);
+            if(seed<=item.Percent)
+            {
+                Instantiate(item.Item,this.transform.position+new Vector3(0,2,0),Quaternion.identity);
+                return;
+            }
+        }
+    }
     public void Dead()
     {
         State="Dying";
+        NavMesh.speed=0.1f;
         Animator.SetInteger("Status",3);
+        if(ItemGenerate==false)
+        {
+            ItemGenerate=true;
+            GenerateItem();
+        }
     }
 }

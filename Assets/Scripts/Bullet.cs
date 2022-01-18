@@ -9,6 +9,7 @@ public class Bullet : MonoBehaviour
     [SerializeField] private float Speed;
     [SerializeField] public bool set=false;
     [SerializeField] private string HitEffectName;
+
     // Start is called before the first frame update
     // Update is called once per frame
     public void Init(Vector3 t)
@@ -33,6 +34,7 @@ public class Bullet : MonoBehaviour
     }
     private void DestroyObejct()
     {
+
         Destroy(this.gameObject);
     }
     private void OnCollisionEnter(Collision other) 
